@@ -11,7 +11,7 @@ from nltk.corpus import words as words
 from math import log
 from nltk import word_tokenize, pos_tag
 
-demomode = 1
+demomode = 0
 if demomode == 1:
     print "Running in demo mode..."
 wordnet_lemmatizer = WordNetLemmatizer()
@@ -109,7 +109,7 @@ def clean_word(input_word):
     if cleaned_word.find(".") == len(cleaned_word)-1:
         cleaned_word = cleaned_word[:-1]
     
-    if cleaned_word not in mywords and cleaned_word not in sentiment_words and cleaned_word in mystopwords:
+    if (cleaned_word not in sentiment_words) and (cleaned_word in mystopwords or cleaned_word not in mywords):
         cleaned_word = ""
     
     return cleaned_word
