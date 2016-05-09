@@ -1,0 +1,356 @@
+python naiveBayes.py < instr.txt && perl analyze.pl predictions.labels test.labels
+
+
+training:
+negative: 847/6181   = 0.137
+positive: 2293/6181  = 0.371
+neutral:  3041/6181  = 0.492
+
+testing:
+negative: 174/938 = 0.185
+positive: 342/938 = 0.365
+neutral:  422/938 = 0.450
+
+
+484 CORRECT, 454 INCORRECT, RATIO = 0.515991471215352.
+
+CONTINGENCY TABLE:
+        negativ neutral positiv PREC
+negativ 99      110     84      0.34
+neutral 44      198     71      0.63
+positiv 31      114     187     0.56
+RECALL  0.57    0.47    0.55
+
+F_1(negative) = 0.423982869379015
+F_1(neutral) = 0.538775510204082
+F_1(positive) = 0.554896142433234
+
+
+
+# Using boost val of 10
+
+499 CORRECT, 439 INCORRECT, RATIO = 0.531982942430704.
+
+CONTINGENCY TABLE:
+        negativ neutral positiv PREC
+negativ 102     99      60      0.39
+neutral 32      173     58      0.66
+positiv 40      150     224     0.54
+RECALL  0.59    0.41    0.65
+
+F_1(negative) = 0.468965517241379
+F_1(neutral) = 0.505109489051095
+F_1(positive) = 0.592592592592593
+
+
+# boost = 20
+496 CORRECT, 442 INCORRECT, RATIO = 0.528784648187633.
+
+CONTINGENCY TABLE:
+        negativ neutral positiv PREC
+negativ 99      101     62      0.38
+neutral 30      166     49      0.68
+positiv 45      155     231     0.54
+RECALL  0.57    0.39    0.68
+
+F_1(negative) = 0.454128440366973
+F_1(neutral) = 0.497751124437781
+F_1(positive) = 0.597671410090556
+
+# boost = 5
+493 CORRECT, 445 INCORRECT, RATIO = 0.525586353944563.
+
+CONTINGENCY TABLE:
+        neutral positiv negativ PREC
+neutral 178     63      36      0.64
+positiv 144     215     38      0.54
+negativ 100     64      100     0.38
+RECALL  0.42    0.63    0.57
+
+F_1(neutral) = 0.509298998569385
+F_1(positive) = 0.581867388362652
+F_1(negative) = 0.45662100456621
+
+
+# boost = 15
+496 CORRECT, 442 INCORRECT, RATIO = 0.528784648187633.
+
+CONTINGENCY TABLE:
+        positiv neutral negativ PREC
+positiv 229     154     44      0.54
+neutral 52      167     30      0.67
+negativ 61      101     100     0.38
+RECALL  0.67    0.40    0.57
+
+F_1(positive) = 0.595578673602081
+F_1(neutral) = 0.497764530551416
+F_1(negative) = 0.458715596330275
+
+
+# boost = 13
+495 CORRECT, 443 INCORRECT, RATIO = 0.52771855010661.
+
+CONTINGENCY TABLE:
+        neutral positiv negativ PREC
+neutral 168     55      31      0.66
+positiv 153     226     42      0.54
+negativ 101     61      101     0.38
+RECALL  0.40    0.66    0.58
+
+F_1(neutral) = 0.497041420118343
+F_1(positive) = 0.592398427260813
+F_1(negative) = 0.462242562929062
+
+# boost = 11, 9
+499 CORRECT, 439 INCORRECT, RATIO = 0.531982942430704.
+
+CONTINGENCY TABLE:
+        negativ neutral positiv PREC
+negativ 101     99      61      0.39
+neutral 32      172     55      0.66
+positiv 41      151     226     0.54
+RECALL  0.58    0.41    0.66
+
+F_1(negative) = 0.464367816091954
+F_1(neutral) = 0.505139500734214
+F_1(positive) = 0.594736842105263
+
+
+# boost = 10, alpha = 0.5
+524 CORRECT, 414 INCORRECT, RATIO = 0.55863539445629.
+
+CONTINGENCY TABLE:
+        neutral positiv negativ PREC
+neutral 178     39      26      0.73
+positiv 167     262     64      0.53
+negativ 77      41      84      0.42
+RECALL  0.42    0.77    0.48
+
+F_1(neutral) = 0.535338345864662
+F_1(positive) = 0.627544910179641
+F_1(negative) = 0.446808510638298
+
+
+# boost = 10, alpha = 13
+572 CORRECT, 366 INCORRECT, RATIO = 0.609808102345416.
+
+CONTINGENCY TABLE:
+        neutral negativ positiv PREC
+neutral 296     87      79      0.64
+negativ 1       13      0       0.93
+positiv 125     74      263     0.57
+RECALL  0.70    0.07    0.77
+
+F_1(neutral) = 0.669683257918552
+F_1(negative) = 0.138297872340426
+F_1(positive) = 0.654228855721393
+
+
+# boost = 10, alpha = 13, enc = ISO
+577 CORRECT, 361 INCORRECT, RATIO = 0.615138592750533.
+
+CONTINGENCY TABLE:
+        negativ positiv neutral PREC
+negativ 12      0       0       1.00
+positiv 60      255     112     0.60
+neutral 102     87      310     0.62
+RECALL  0.07    0.75    0.73
+
+F_1(negative) = 0.129032258064516
+F_1(positive) = 0.663198959687906
+F_1(neutral) = 0.673181324647123
+
+
+# word_token for training and testing
+572 CORRECT, 366 INCORRECT, RATIO = 0.609808102345416.
+
+CONTINGENCY TABLE:
+        negativ neutral positiv PREC
+negativ 9       0       0       1.00
+neutral 92      310     89      0.63
+positiv 73      112     253     0.58
+RECALL  0.05    0.73    0.74
+
+F_1(negative) = 0.0983606557377049
+F_1(neutral) = 0.67907995618839
+F_1(positive) = 0.648717948717949
+
+
+# removing non-english words: alpha = 30, boost = 10
+562 CORRECT, 376 INCORRECT, RATIO = 0.599147121535181.
+
+CONTINGENCY TABLE:
+        neutral negativ positiv PREC
+neutral 294     95      85      0.62
+negativ 3       11      0       0.79
+positiv 125     68      257     0.57
+RECALL  0.70    0.06    0.75
+
+F_1(neutral) = 0.65625
+F_1(negative) = 0.117021276595745
+F_1(positive) = 0.648989898989899
+
+
+# with basic smileys
+564 CORRECT, 374 INCORRECT, RATIO = 0.601279317697228.
+
+CONTINGENCY TABLE:
+        neutral negativ positiv PREC
+neutral 294     100     80      0.62
+negativ 2       8       0       0.80
+positiv 126     66      262     0.58
+RECALL  0.70    0.05    0.77
+
+F_1(neutral) = 0.65625
+F_1(negative) = 0.0869565217391304
+F_1(positive) = 0.658291457286432
+
+
+# without stop words, acc goes up, but completely tanks negative
+568 CORRECT, 370 INCORRECT, RATIO = 0.605543710021322.
+
+CONTINGENCY TABLE:
+        negativ neutral positiv PREC
+negativ 0       0       0       0.00
+neutral 127     350     124     0.58
+positiv 47      72      218     0.65
+RECALL  0.00    0.83    0.64
+
+F_1(negative) = 0
+F_1(neutral) = 0.684261974584555
+F_1(positive) = 0.642120765832106
+
+
+# nostopwords, alpha = 30, boost = 10, smileys
+575 CORRECT, 363 INCORRECT, RATIO = 0.613006396588486.
+
+CONTINGENCY TABLE:
+        positiv neutral negativ PREC
+positiv 236     83      59      0.62
+neutral 106     339     115     0.61
+negativ 0       0       0       0.00
+RECALL  0.69    0.80    0.00
+
+F_1(positive) = 0.655555555555556
+F_1(neutral) = 0.690427698574338
+F_1(negative) = 0
+
+
+# nostopwords, alpha = 30, boost = 20, smileys
+572 CORRECT, 366 INCORRECT, RATIO = 0.609808102345416.
+
+CONTINGENCY TABLE:
+        positiv neutral negativ PREC
+positiv 246     96      64      0.61
+neutral 96      326     110     0.61
+negativ 0       0       0       0.00
+RECALL  0.72    0.77    0.00
+
+F_1(positive) = 0.657754010695187
+F_1(neutral) = 0.683438155136268
+F_1(negative) = 0
+
+
+# nostopwords, alpha = 3, boost = 8, smileys
+564 CORRECT, 374 INCORRECT, RATIO = 0.601279317697228.
+
+CONTINGENCY TABLE:
+        neutral negativ positiv PREC
+neutral 255     59      56      0.69
+negativ 7       26      3       0.72
+positiv 160     89      283     0.53
+RECALL  0.60    0.15    0.83
+
+F_1(neutral) = 0.643939393939394
+F_1(negative) = 0.247619047619048
+F_1(positive) = 0.647597254004577
+
+
+# with more smileys, alpha = 3, boost = 8, and stopwords
+563 CORRECT, 375 INCORRECT, RATIO = 0.600213219616205.
+
+CONTINGENCY TABLE:
+        neutral negativ positiv PREC
+neutral 254     60      56      0.69
+negativ 7       26      3       0.72
+positiv 161     88      283     0.53
+RECALL  0.60    0.15    0.83
+
+F_1(neutral) = 0.641414141414141
+F_1(negative) = 0.247619047619048
+F_1(positive) = 0.647597254004577
+
+
+# with more smileys, alpha = 3, boost = 8, without stopwords
+548 CORRECT, 390 INCORRECT, RATIO = 0.584221748400853.
+
+CONTINGENCY TABLE:
+        negativ positiv neutral PREC
+negativ 7       0       0       1.00
+positiv 96      259     140     0.52
+neutral 71      83      282     0.65
+RECALL  0.04    0.76    0.67
+
+F_1(negative) = 0.0773480662983426
+F_1(positive) = 0.618876941457587
+F_1(neutral) = 0.657342657342657
+
+
+# just the more common smileys, alpha = 3, boost = 8, no stopwords
+563 CORRECT, 375 INCORRECT, RATIO = 0.600213219616205.
+
+CONTINGENCY TABLE:
+        neutral positiv negativ PREC
+neutral 254     56      60      0.69
+positiv 161     283     88      0.53
+negativ 7       3       26      0.72
+RECALL  0.60    0.83    0.15
+
+F_1(neutral) = 0.641414141414141
+F_1(positive) = 0.647597254004577
+F_1(negative) = 0.247619047619048
+
+
+# lemmatization, no stopwords, alpha = 3, boost = 8, and smileys
+559 CORRECT, 379 INCORRECT, RATIO = 0.595948827292111.
+
+CONTINGENCY TABLE:
+        neutral negativ positiv PREC
+neutral 251     57      57      0.69
+negativ 7       27      4       0.71
+positiv 164     90      281     0.53
+RECALL  0.59    0.16    0.82
+
+F_1(neutral) = 0.637865311308768
+F_1(negative) = 0.254716981132075
+F_1(positive) = 0.640820980615736
+
+
+# lemmatization, stopwords, alpha = 3, boost = 8, and smileys
+557 CORRECT, 381 INCORRECT, RATIO = 0.593816631130064.
+
+CONTINGENCY TABLE:
+        positiv neutral negativ PREC
+positiv 264     138     95      0.53
+neutral 78      284     70      0.66
+negativ 0       0       9       1.00
+RECALL  0.77    0.67    0.05
+
+F_1(positive) = 0.629320619785459
+F_1(neutral) = 0.665105386416862
+F_1(negative) = 0.0983606557377049
+
+
+# lemmatization, stopwords, alpha = 5, boost = 20, smileys
+558 CORRECT, 380 INCORRECT, RATIO = 0.594882729211087.
+
+CONTINGENCY TABLE:
+        positiv neutral negativ PREC
+positiv 262     135     81      0.55
+neutral 80      287     84      0.64
+negativ 0       0       9       1.00
+RECALL  0.77    0.68    0.05
+
+F_1(positive) = 0.639024390243903
+F_1(neutral) = 0.657502863688431
+F_1(negative) = 0.0983606557377049
