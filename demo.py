@@ -22,11 +22,11 @@ while(1):
             pass
     
     if pos > neg:
-        print("Baseline: Positive")
+        print("Baseline: positive")
     elif pos < neg:
-        print("Baseline: Negative")
+        print("Baseline: negative")
     else:
-        print("Baseline: Neutral")
+        print("Baseline: neutral")
     
     #Naive Bayes 
     naiveBayes.trainNaiveBayes("train_formatted.txt")
