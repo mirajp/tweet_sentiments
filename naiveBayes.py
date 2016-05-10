@@ -3,7 +3,7 @@ reload(sys)
 sys.setdefaultencoding("ISO-8859-1")
 
 from nltk.stem import WordNetLemmatizer
-from nltk.corpus import opinion_lexicon
+#from nltk.corpus import opinion_lexicon
 from nltk.corpus import wordnet
 import re
 from nltk.corpus import stopwords
@@ -60,6 +60,7 @@ for i in range(0, len(engwords)):
     mywords[engwords[i]] = 1
 
 flag = 0
+"""
 #0 = negative, 1 = positive
 for w in opinion_lexicon.words():
     if flag == 0:
@@ -69,6 +70,15 @@ for w in opinion_lexicon.words():
 
     else:
         sentiment_words[w] = flag
+"""
+
+lines = [line.rstrip('\n') for line in open('positive-words.txt')]
+for w in lines:
+    sentiment_words[w] = 1
+
+lines = [line.rstrip('\n') for line in open('negative-words.txt')]
+for w in lines:
+    sentiment_words[w] = 0
 
 sentiment_words[":)"] = 1
 sentiment_words[":("] = 0
@@ -154,6 +164,7 @@ def trainWithTweet(tweet, category):
     return
 
 def trainNaiveBayes(trainingList):
+    print "Beginning training..."
     linenum = 0
     trainingListFile = open(trainingList, "rb")
     for line in trainingListFile:
@@ -213,6 +224,7 @@ def makePrediction(tweet):
     return prediction
 
 def testNaiveBayes(testingList, predictionsList):
+    print "Beginning testing..."
     global alpha, vocabSize, numTweets
     testingListFile = open(testingList, "rb")
     predictionsListFile = open(predictionsList, "wb")
