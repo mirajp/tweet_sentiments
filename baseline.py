@@ -26,13 +26,10 @@ for tweet in test_file:
     for word in words:
         try:
             if sentiment_words[word.lower()] == 1:
-                print("pos found")
                 pos += 1
             elif sentiment_words[word.lower()] == 0:
-                print("neg found")
                 neg += 1
         except KeyError:
-            print("nothing")
             pass
 
     if pos > neg:

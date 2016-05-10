@@ -226,22 +226,27 @@ def testNaiveBayes(testingList, predictionsList):
     predictionsListFile.close()
     return
 
-trainingList = raw_input("Enter the filename of the list of training documents: ")
-if demomode == 0:
-    testingList = raw_input("Enter the filename of the list of testing documents: ")
-    predictionsList = raw_input("Enter the filename to save the predictions: ")
+def main():
+    trainingList = raw_input("Enter the filename of the list of training documents: ")
+    if demomode == 0:
+        testingList = raw_input("Enter the filename of the list of testing documents: ")
+        predictionsList = raw_input("Enter the filename to save the predictions: ")
 
-trainNaiveBayes(trainingList)
-if demomode == 0:
-    testNaiveBayes(testingList, predictionsList)
-else:
-    print "Live demo mode started..."
-    while True:
-        print "Enter a tweet:"
-        lineread = sys.stdin.readline()
-        lineread = lineread[:-1]
-        if lineread == '':
-            break
-        print "Predicted sentiment: " + makePrediction(lineread) + "\n"
-exit()
+    trainNaiveBayes(trainingList)
+    if demomode == 0:
+        testNaiveBayes(testingList, predictionsList)
+    else:
+        print "Live demo mode started..."
+        while True:
+            print "Enter a tweet:"
+            lineread = sys.stdin.readline()
+            lineread = lineread[:-1]
+            if lineread == '':
+                break
+            print "Predicted sentiment: " + makePrediction(lineread) + "\n"
+
+    exit()
+
+if __name__ == "__main__":
+    main()
 
