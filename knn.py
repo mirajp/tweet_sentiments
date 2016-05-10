@@ -92,6 +92,7 @@ def prepLexicon():
         else:
             sentiment_words[w] = flag
     return sentiment_words
+#code Below adapted from http://machinelearningmastery.com/tutorial-to-implement-k-nearest-neighbors-in-python-from-scratch/
 
 def euclideanDistance(instance1,instance2, length):
     distance = 0
