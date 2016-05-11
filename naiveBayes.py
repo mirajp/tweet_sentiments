@@ -3,7 +3,7 @@ reload(sys)
 sys.setdefaultencoding("ISO-8859-1")
 
 from nltk.stem import WordNetLemmatizer
-#from nltk.corpus import opinion_lexicon
+from nltk.corpus import opinion_lexicon
 from nltk.corpus import wordnet
 import re
 from nltk.corpus import stopwords
@@ -36,9 +36,9 @@ def get_wordnet_pos(treebank_tag):
         return wordnet.NOUN
 
 # sentimentBoostVal = how much to increase word's count in category if it correctly identifies tweet's category
-sentimentBoostVal = 20
+sentimentBoostVal = 10
 # alpha = additive smoothing factor
-alpha = 5
+alpha = 13
 
 #Count number of times each word appears in each category
 wordsCount = {}
@@ -60,7 +60,6 @@ for i in range(0, len(engwords)):
     mywords[engwords[i]] = 1
 
 flag = 0
-"""
 #0 = negative, 1 = positive
 for w in opinion_lexicon.words():
     if flag == 0:
@@ -70,15 +69,18 @@ for w in opinion_lexicon.words():
 
     else:
         sentiment_words[w] = flag
-"""
 
+
+"""
 lines = [line.rstrip('\n') for line in open('positive-words.txt')]
 for w in lines:
     sentiment_words[w] = 1
+    #print "postitive word: " + w
 
 lines = [line.rstrip('\n') for line in open('negative-words.txt')]
 for w in lines:
     sentiment_words[w] = 0
+"""
 
 sentiment_words[":)"] = 1
 sentiment_words[":("] = 0

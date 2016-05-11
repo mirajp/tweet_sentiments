@@ -3,12 +3,12 @@ reload(sys)
 sys.setdefaultencoding("ISO-8859-1")
 import re
 from nltk.corpus import opinion_lexicon
-
+#import nltk.corpus
 flag = 0
 sentiment_words = {}
 
 #set up the lexicon
-for w in opinion_lexicon.words():
+for w in nltk.corpus.opinion_lexicon.words():
     if flag == 0:
         sentiment_words[w] = flag
         if re.search("zombie",w):

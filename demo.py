@@ -2,6 +2,7 @@ import knn
 import naiveBayes
 
 trainingSet,lexicon = knn.train()
+naiveBayes.trainNaiveBayes("train_formatted.txt")
 k = 5
 while(1):
     test_in = raw_input("Input: ")
@@ -29,7 +30,6 @@ while(1):
         print("Baseline: neutral")
     
     #Naive Bayes 
-    naiveBayes.trainNaiveBayes("train_formatted.txt")
     print "Naive Bayes: "+ naiveBayes.makePrediction(test_in)
 
     #KNN

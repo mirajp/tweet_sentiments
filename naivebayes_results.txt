@@ -1,6 +1,6 @@
 
     Actual      Predicted
-1.  neutral     positive 
+1.  neutral     neutral 
 Won the match #getin . Plus, tomorrow is a very busy day, with Awareness Day's and debates. Gulp. Debates...
 
 2.  positive     positive
@@ -9,13 +9,13 @@ Lunch from my new Lil spot ...THE COTTON BOWL ....pretty good#1st#time#will be g
 3.  positive     positive
 SNC Halloween Pr. Pumped. Let's work it for Sunday....Packers vs....who knows or caresn. #SNC #cheerpracticeonhalloween
 
-4.  neutral     positive
+4.  neutral     neutral
 Manchester United will try to return to winning ways when they face Arsenal in the Premier League at Old Trafford on Saturday.
 
-5.  neutral     positive
+5.  neutral     neutral
 Going to a bulls game with Aaliyah & hope next Thursday
 
-6.  neutral     positive
+6.  neutral     neutral
 Any Toon Fans with a spare ticket for Anfield on Sunday?willing to pay extra #NUFC
 
 7.  positive     positive
@@ -33,14 +33,14 @@ going to bed now...Rose parade then game tomorrow
 11.  negative     neutral
 Monday before I leave Singapore, I am going to post something that might be offensive.
 
-12.  negative     neutral
+12.  negative     positive
 Gold edges down ahead of US jobs data: SINGAPORE (Reuters) - Gold edged lower on Friday, with investors waiting for... http://dlvr.it/2QJhYs 
 
-13.  negative     neutral
+13.  negative     negative
 'Love-cheat' Daniel Radcliffe splits with girlfriend Rosie Coker: London, Oct 19: Daniel Radcliffe has split wit... http://tinyurl.com/8oxx2ns 
 
-14.  negative     positive
+14.  negative     neutral
 Well if no ones going to school tomorrow then I guess I won't go :p
 
-15.  negative     positive
+15.  negative     neutral
 Watching Contraband on the PVR & it's too frigging predictable to continue watching. Gonna go wash my hair. #friday
