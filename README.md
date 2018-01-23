@@ -1,2 +1,2 @@
-# tweet_sentiments
-NLP Final Project: Sentiment analysis of tweets (Naive Bayes and KNN)
+# Tweet Sentiment Classifier
+NLP Final Project: Sentiment analysis of tweets (using Naive Bayes and KNN)
